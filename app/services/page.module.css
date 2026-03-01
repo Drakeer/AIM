@@ -1,0 +1,127 @@
+.servicesSection {
+  padding: 80px 0;
+}
+
+.servicesInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  padding: 48px 36px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+}
+
+.coverage {
+  padding: 64px 0;
+  background: var(--color-dark);
+  text-align: center;
+}
+
+.coverageInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.coverage h2 {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.coverage p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.coverageStates {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.stateCard {
+  background: var(--color-dark-lighter);
+  padding: 32px 48px;
+  text-align: center;
+}
+
+.stateCard h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.stateCard p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .coverageStates {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+}

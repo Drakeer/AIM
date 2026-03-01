@@ -1,33 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-primary: #0bb4aa;
+  --color-primary-dark: #099e95;
+  --color-dark: #101820;
+  --color-dark-lighter: #1a2530;
+  --color-white: #ffffff;
+  --color-light: #f9fafd;
+  --color-gray: #6b7280;
+  --color-gray-light: #e5e7eb;
+  --color-text: #333333;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --max-width: 1200px;
+  --header-height: 80px;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  line-height: 1.6;
+  background: var(--color-white);
 }
 
 a {
@@ -35,8 +40,92 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.sectionLight {
+  background: var(--color-light);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--color-dark);
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray);
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnPrimary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btnPrimary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btnOutline:hover {
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+
+.btnDark {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.btnDark:hover {
+  background: var(--color-dark-lighter);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
   }
 }

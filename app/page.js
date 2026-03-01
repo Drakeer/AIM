@@ -15,7 +15,7 @@ import {
   TbAnchor,
 } from 'react-icons/tb';
 
-const ICON_SIZE = 36;
+const ICON_SIZE = 48;
 
 const services = [
   {

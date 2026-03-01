@@ -7,7 +7,7 @@ export default function Hero({ label, title, subtitle, small, cta, ctaHref, ctaS
       <div
         className={styles.heroBg}
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80')`,
+          backgroundImage: `url('/hero-truck.jpg')`,
         }}
       />
       <div className={styles.heroOverlay} />

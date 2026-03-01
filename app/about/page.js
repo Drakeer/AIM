@@ -2,9 +2,32 @@
 
 import Hero from '@/components/Hero';
 import styles from './page.module.css';
-import { TbShield, TbTarget, TbHeartHandshake } from 'react-icons/tb';
+import { TbShield, TbTarget, TbHeartHandshake, TbBrandLinkedin } from 'react-icons/tb';
 
 const ICON_SIZE = 36;
+
+const team = [
+  {
+    name: 'Austin Brown',
+    title: 'Owner / CEO',
+    linkedin: 'https://www.linkedin.com/in/austin-brown-b5897b90/',
+  },
+  {
+    name: 'Jude Latiolais',
+    title: 'Vice President of Corporate Operations',
+    linkedin: 'https://www.linkedin.com/in/jude-latiolais-6a8a8b90/',
+  },
+  {
+    name: 'Tyler Urbina',
+    title: 'Executive Vice President of Operations',
+    linkedin: 'https://www.linkedin.com/in/tyler-urbina-88b03473/',
+  },
+  {
+    name: 'Zachary Gray',
+    title: 'Vice President of Measurement',
+    linkedin: 'https://www.linkedin.com/in/zachary-gray-9b834a121/',
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -72,6 +95,31 @@ export default function AboutPage() {
                 transparent pricing, and consistent delivery on our promises.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.team}>
+        <div className={styles.teamInner}>
+          <h2 className="sectionTitle">Leadership Team</h2>
+          <p className="sectionSubtitle" style={{ margin: '0 auto 48px' }}>
+            Our deep knowledge of custody transfer liquid measurement coupled with extensive experience in LACT and terminal services truly sets us apart.
+          </p>
+          <div className={styles.teamGrid}>
+            {team.map((member, i) => (
+              <div key={i} className={styles.teamCard}>
+                <div className={styles.teamAvatar}>
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <h3>{member.name}</h3>
+                <p className={styles.teamTitle}>{member.title}</p>
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className={styles.teamLinkedin}>
+                    <TbBrandLinkedin size={20} /> LinkedIn
+                  </a>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

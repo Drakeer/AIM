@@ -110,6 +110,82 @@
   line-height: 1.6;
 }
 
+/* Team */
+.team {
+  padding: 80px 0;
+}
+
+.teamInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.teamCard {
+  background: var(--color-white);
+  padding: 40px 24px;
+  border: 1px solid var(--color-gray-light);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.teamAvatar {
+  width: 80px;
+  height: 80px;
+  background: var(--color-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto 20px;
+}
+
+.teamCard h3 {
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.teamTitle {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.teamLinkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.teamLinkedin:hover {
+  opacity: 0.8;
+}
+
 /* Equipment */
 .equipment {
   padding: 80px 0;
@@ -184,6 +260,16 @@
   }
 
   .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
     grid-template-columns: 1fr;
   }
 }
